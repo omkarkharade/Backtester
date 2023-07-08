@@ -1,4 +1,6 @@
 from django.shortcuts import render ,HttpResponse ,redirect
+from django.views.static import serve
+from django.template import loader
 import yfinance as yf
 import backtesting
 import ta
@@ -20,7 +22,7 @@ tpr=0
 # Create your views here.
 def index(request):
     
-    return render(request, 'index.html')
+    return render(None, 'index.html')
 
 def next(request):
     context={
@@ -88,6 +90,13 @@ class SMAStrategy(Strategy):
 
 
 
+def candlestick(request):
+    # return serve(request, 'result.html')
+    
+    filepath = './templates/result/result.html'
+    return serve(request, os.path.basename(filepath), os.path.dirname(filepath))
+    
+
 def result(request):
     
     market=request.POST['market']
@@ -136,7 +145,7 @@ def result(request):
             
 
     
-    z=bt.plot()
+    z=bt.plot(filename="templates/result/result.html",open_browser=False)
     
     
     
