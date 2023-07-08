@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Analysis</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .card {
+      margin-bottom: 20px;
+      background-color: #000000; /* Set the background color for all cards */
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4">Trades Analysis</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Start Date</h4>
+            <p class="card-text">{{start}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">End Date</h4>
+            <p class="card-text">{{end}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Duration</h4>
+            <p class="card-text">{{duration}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Equity Final</h4>
+            <p class="card-text">{{equityfinal}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Equity Peak</h4>
+              <p class="card-text">{{equitypeak}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Return [%]</h4>
+              <p class="card-text">{{return}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Return (Ann.) [%]</h4>
+              <p class="card-text">{{returnannual}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">No. of Trades</h4>
+              <p class="card-text">{{trades}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Win Rate [%]</h4>
+              <p class="card-text">{{winrate}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Best Trade [%]</h4>
+              <p class="card-text">{{besttrade}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Repeat the structure for remaining label-value pairs -->
+  </div>
+</body>
+</html>
