@@ -20,9 +20,7 @@ stl=0
 tpr=0
 
 # Create your views here.
-def index(request):
-    
-    return render(None, 'index.html')
+
 
 def next(request):
     context={
@@ -65,12 +63,7 @@ class SMAStrategy(Strategy):
     stl=0
     tpr=0
     def init(self):
-        a=0
-        
-        
-        
-
-        
+        a=0    
     
     def next(self):
         price = self.data.Close[-1]
